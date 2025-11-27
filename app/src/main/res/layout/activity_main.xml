@@ -15,9 +15,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:fontFamily="@font/goldman_font"
             android:layout_marginBottom="8dp"
             android:text="WARBONDS"
-            android:textColor="#FFC107"
+            android:textColor="#FFD700"
             android:textSize="34dp"
             android:textStyle="bold" />
 
@@ -32,7 +33,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TOTAL MEDALS -"
-                android:textColor="#FFC107"
+                android:fontFamily="@font/goldman_font"
+                android:textColor="#FFD700"
                 android:textSize="16sp"
                 android:layout_marginEnd="8dp" />
 
@@ -41,6 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="20000"
+                android:fontFamily="@font/goldman_font"
                 android:textColor="#FFD700"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -63,7 +66,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Masters of the ceremony"
-            android:textColor="#FFC107"
+            android:textColor="#FFD700"
+            android:fontFamily="@font/goldman_font"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginBottom="16dp" />
@@ -86,7 +90,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Viper commandos"
-            android:textColor="#FFC107"
+            android:textColor="#FFD700"
+            android:fontFamily="@font/goldman_font"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginBottom="16dp" />
@@ -107,8 +112,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/goldman_font"
             android:text="Urban legends"
-            android:textColor="#FFC107"
+            android:textColor="#FFD700"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginBottom="16dp" />
@@ -129,7 +135,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Borderline justice"
-            android:textColor="#FFC107"
+            android:textColor="#FFD700"
+            android:fontFamily="@font/goldman_font"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginBottom="16dp" />

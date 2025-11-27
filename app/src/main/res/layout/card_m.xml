@@ -10,8 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+        >
 
 
         <LinearLayout
@@ -25,23 +24,22 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_gravity="center"
-                android:src="@drawable/python_commandos2" />
+                android:src="@drawable/moc" />
 
             <TextView
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_weight="1"
+                android:layout_weight="0"
                 android:fontFamily="@font/goldman_font"
                 android:text="Completed: 0/20"
                 android:textColor="#FFD700"
                 android:textSize="15sp" />
 
             <TextView
-                android:layout_width="106dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/goldman_font"
                 android:text="Medals: 0/600"
