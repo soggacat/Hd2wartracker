@@ -14,12 +14,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
             android:text="WARBONDS"
             android:textColor="#FFC107"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
-
+            android:textSize="34dp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -62,7 +62,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MAsters of the ceremony"
+            android:text="Masters of the ceremony"
             android:textColor="#FFC107"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -73,9 +73,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <include layout="@layout/card_m"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
 
         <View
@@ -110,7 +107,28 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="URBAN LEGENDS"
+            android:text="Urban legends"
+            android:textColor="#FFC107"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+
+        <include layout="@layout/card_m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_marginVertical="24dp"
+            android:background="#000000" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Borderline justice"
             android:textColor="#FFC107"
             android:textSize="20sp"
             android:textStyle="bold"

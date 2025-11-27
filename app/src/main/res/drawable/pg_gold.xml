@@ -4,6 +4,9 @@
         <shape>
             <corners android:radius="5dp" />
             <solid android:color="#000000" />
+            <stroke
+                android:width="2dp"
+                android:color="#FFD500" />
         </shape>
     </item>
     <item android:id="@android:id/progress">
