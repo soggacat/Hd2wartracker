@@ -14,11 +14,9 @@
 
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:orientation="vertical">
-
 
             <ImageView
                 android:layout_width="fill_parent"
@@ -26,25 +24,31 @@
                 android:layout_gravity="center"
                 android:src="@drawable/moc" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_weight="0"
-                android:fontFamily="@font/goldman_font"
-                android:text="Completed: 0/20"
-                android:textColor="#FFD700"
-                android:textSize="15sp" />
+            <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_weight="1"
-                android:fontFamily="@font/goldman_font"
-                android:text="Medals: 0/600"
-                android:textColor="#FFD700"
-                android:textSize="12sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/goldman_font"
+                    android:text="Completed: 0/20"
+                    android:textColor="#FFD700"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="92dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:paddingLeft="35dp"
+                    android:fontFamily="@font/goldman_font"
+                    android:text="Medals: 0/600"
+                    android:textColor="#FFD700"
+                    android:textSize="15sp" />
+            </LinearLayout>
 
 
         </LinearLayout>
