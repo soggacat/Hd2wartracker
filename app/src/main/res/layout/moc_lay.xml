@@ -48,27 +48,31 @@
                 android:gravity="center">
 
                 <ImageView
+                    android:layout_gravity="left"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:src="@drawable/snake" />
+                    android:src="@drawable/moc_p1_1" />
 
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="8dp"
-                    android:src="@drawable/snake" />
             </LinearLayout>
 
             <!-- CENTER big item -->
+
+            <!-- BOTTOM ROW (2 small items) -->
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/moc_p1_2" />
+
             <ImageView
                 android:layout_width="200dp"
                 android:layout_height="250dp"
                 android:layout_gravity="center"
                 android:layout_margin="8dp"
-                android:src="@drawable/snake" />
+                android:src="@drawable/moc_p1_3" />
 
-            <!-- BOTTOM ROW (2 small items) -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -79,13 +83,13 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:src="@drawable/snake" />
+                    android:src="@drawable/moc_p1_4" />
 
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:src="@drawable/snake" />
+                    android:src="@drawable/moc_p1_5" />
             </LinearLayout>
 
             <!-- SIDE items (left/right small) -->
@@ -99,13 +103,8 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:src="@drawable/snake" />
+                    android:src="@drawable/moc_p1_6" />
 
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="8dp"
-                    android:src="@drawable/snake" />
             </LinearLayout>
         </LinearLayout>
 
