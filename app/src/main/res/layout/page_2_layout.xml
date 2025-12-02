@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="#112244">
+
+    <!-- Заголовок PAGE 2 -->
+    <TextView
+        android:id="@+id/page2_title"
+        android:text="Page 2"
+        android:textColor="#FFE600"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Основная рамка -->
+    <FrameLayout
+        android:id="@+id/page2_frame"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="#002255"
+        app:layout_constraintTop_toBottomOf="@id/page2_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/page2_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Верхний ряд (4 маленьких квадрата) -->
+            <FrameLayout
+                android:id="@+id/p2_item1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                android:background="#223"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/p2_item2"/>
+
+            <FrameLayout
+                android:id="@+id/p2_item2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                android:background="#334"
+                app:layout_constraintTop_toTopOf="@id/p2_item1"
+                app:layout_constraintStart_toEndOf="@id/p2_item1"
+                app:layout_constraintEnd_toStartOf="@id/p2_item3"/>
+
+            <FrameLayout
+                android:id="@+id/p2_item3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                android:background="#445"
+                app:layout_constraintTop_toTopOf="@id/p2_item1"
+                app:layout_constraintStart_toEndOf="@id/p2_item2"
+                app:layout_constraintEnd_toStartOf="@id/p2_item4"/>
+
+            <FrameLayout
+                android:id="@+id/p2_item4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                android:background="#556"
+                app:layout_constraintTop_toTopOf="@id/p2_item1"
+                app:layout_constraintStart_toEndOf="@id/p2_item3"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!-- Нижний ряд — слева два высоких блока -->
+            <FrameLayout
+                android:id="@+id/p2_item_big_left"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#667"
+                app:layout_constraintTop_toBottomOf="@id/p2_item1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/p2_item_big_mid"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <FrameLayout
+                android:id="@+id/p2_item_big_mid"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#778"
+                app:layout_constraintTop_toTopOf="@id/p2_item_big_left"
+                app:layout_constraintStart_toEndOf="@id/p2_item_big_left"
+                app:layout_constraintEnd_toStartOf="@id/p2_item_big_right"
+                app:layout_constraintBottom_toBottomOf="@id/p2_item_big_left"/>
+
+            <!-- Большой портрет справа -->
+            <FrameLayout
+                android:id="@+id/p2_item_big_right"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#889"
+                app:layout_constraintTop_toTopOf="@id/p2_item_big_mid"
+                app:layout_constraintStart_toEndOf="@id/p2_item_big_mid"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/p2_item_big_mid"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

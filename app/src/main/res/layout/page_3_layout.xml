@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="#112244">
+
+    <!-- Заголовок PAGE 3 -->
+    <TextView
+        android:id="@+id/page3_title"
+        android:text="Page 3"
+        android:textColor="#FFE600"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <FrameLayout
+        android:id="@+id/page3_frame"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="#002255"
+        app:layout_constraintTop_toBottomOf="@id/page3_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/page3_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Левый верхний большой квадрат -->
+            <FrameLayout
+                android:id="@+id/p3_big_left"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#223"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/p3_right_column_top"/>
+
+            <!-- Правая верхняя колонка (2 квадрата) -->
+            <FrameLayout
+                android:id="@+id/p3_right_column_top"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#334"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toEndOf="@id/p3_big_left"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <FrameLayout
+                android:id="@+id/p3_right_column_bottom"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#445"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="@id/p3_right_column_top"
+                app:layout_constraintEnd_toEndOf="@id/p3_right_column_top"
+                app:layout_constraintTop_toBottomOf="@id/p3_right_column_top"/>
+
+            <!-- Большой правый длинный прямоугольник -->
+            <FrameLayout
+                android:id="@+id/p3_big_right"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#556"
+                app:layout_constraintStart_toStartOf="@id/p3_right_column_bottom"
+                app:layout_constraintEnd_toEndOf="@id/p3_right_column_bottom"
+                app:layout_constraintTop_toBottomOf="@id/p3_right_column_bottom"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <!-- Нижняя строка — 3 маленьких блока -->
+            <FrameLayout
+                android:id="@+id/p3_small1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#667"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintTop_toBottomOf="@id/p3_big_left"
+                app:layout_constraintStart_toStartOf="@id/p3_big_left"
+                app:layout_constraintEnd_toStartOf="@id/p3_small2"/>
+
+            <FrameLayout
+                android:id="@+id/p3_small2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#778"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintTop_toTopOf="@id/p3_small1"
+                app:layout_constraintStart_toEndOf="@id/p3_small1"
+                app:layout_constraintEnd_toStartOf="@id/p3_small3"/>
+
+            <FrameLayout
+                android:id="@+id/p3_small3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#889"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintTop_toTopOf="@id/p3_small1"
+                app:layout_constraintStart_toEndOf="@id/p3_small2"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

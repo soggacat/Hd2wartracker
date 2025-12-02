@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="#000000">
+
+    <!-- Заголовок PAGE 1 -->
+    <TextView
+        android:id="@+id/page1_title"
+        android:text="Page 1"
+        android:textColor="#FFE600"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Большая рамка -->
+    <FrameLayout
+        android:id="@+id/page1_frame"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="#FFD700"
+        app:layout_constraintTop_toBottomOf="@id/page1_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/page1_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Левая колонка -->
+
+            <ImageView
+                android:id="@+id/p1_item1"
+                android:layout_width="65dp"
+                android:layout_height="54dp"
+                android:background="#000000"
+                android:src="@drawable/moc_p1_1"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@id/p1_item_center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/p1_item2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="##000000"
+                app:layout_constraintStart_toStartOf="@id/p1_item1"
+                app:layout_constraintTop_toBottomOf="@id/p1_item1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/p1_item_center"
+                android:src="@drawable/moc_p1_2"/>
+
+            <!-- Центр -->
+            <ImageView
+                android:id="@+id/p1_item_center"
+                android:layout_width="120dp"
+                android:layout_height="176dp"
+                android:background="#000000"
+                android:src="@drawable/moc_p1_3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/p1_item3"
+                app:layout_constraintStart_toEndOf="@id/p1_item1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Правая колонка — квадрат 1 -->
+            <ImageView
+                android:id="@+id/p1_item3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                android:background="#000000"
+                app:layout_constraintStart_toEndOf="@id/p1_item_center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/moc_p1_4"/>
+
+            <!-- Квадрат 2 -->
+
+            <!-- Квадрат 3 -->
+            <ImageView
+                android:id="@+id/p1_item4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#000000"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="@id/p1_item3"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@id/p1_item3"
+                app:layout_constraintTop_toBottomOf="@id/p1_item3"
+                android:src="@drawable/moc_p1_5"/>
+
+            <ImageView
+                android:id="@+id/p1_item5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                android:background="#000000"
+                app:layout_constraintTop_toBottomOf="@id/p1_item4"
+                app:layout_constraintStart_toStartOf="@id/p1_item4"
+                app:layout_constraintEnd_toEndOf="@id/p1_item4"
+                android:src="@drawable/moc_p1_6"/>
+
+            <!-- Нижний большой -->
+            <ImageView
+                android:id="@+id/p1_item6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#000000"
+                app:layout_constraintTop_toBottomOf="@id/p1_item5"
+                app:layout_constraintStart_toStartOf="@id/p1_item5"
+                app:layout_constraintEnd_toEndOf="@id/p1_item5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/moc_p1_6"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
