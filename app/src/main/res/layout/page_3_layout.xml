@@ -20,7 +20,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
-    <!-- Большая рамка -->
     <FrameLayout
         android:id="@+id/page1_frame"
         android:layout_width="348dp"
