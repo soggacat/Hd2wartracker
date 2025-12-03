@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hd2wartracker">
         <activity
+            android:name=".moc_screen"
+            android:exported="false">
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"

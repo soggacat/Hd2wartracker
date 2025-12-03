@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="16dp"
-    android:background="#000000">
+    android:background="@android:color/transparent">
 
     <!-- Заголовок PAGE 1 -->
     <TextView
