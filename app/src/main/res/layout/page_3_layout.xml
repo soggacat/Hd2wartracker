@@ -2,14 +2,15 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="16dp"
-    android:background="#112244">
+    android:background="#000000">
 
-    <!-- Заголовок PAGE 3 -->
+    <!-- Заголовок PAGE 1 -->
     <TextView
-        android:id="@+id/page3_title"
+        android:id="@+id/page1_title"
         android:text="Page 3"
         android:textColor="#FFE600"
         android:textStyle="bold"
@@ -19,97 +20,90 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
+    <!-- Большая рамка -->
     <FrameLayout
-        android:id="@+id/page3_frame"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/page1_frame"
+        android:layout_width="348dp"
+        android:layout_height="203dp"
+        android:background="@drawable/card_bg"
         android:padding="12dp"
-        android:background="#002255"
-        app:layout_constraintTop_toBottomOf="@id/page3_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/page1_title">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/page3_grid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:id="@+id/page1_grid"
+            android:layout_width="324dp"
+            android:layout_height="180dp">
 
-            <!-- Левый верхний большой квадрат -->
-            <FrameLayout
-                android:id="@+id/p3_big_left"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:background="#223"
-                app:layout_constraintDimensionRatio="1:1"
+
+            <ImageView
+                android:id="@+id/p1_item1"
+                android:layout_width="62dp"
+                android:layout_height="55dp"
+                android:src="@drawable/moc_p1_1"
+                app:layout_constraintBottom_toTopOf="@+id/p1_item2"
+                app:layout_constraintEnd_toEndOf="@+id/p1_item2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/p1_item2"
+                app:layout_constraintTop_toTopOf="@+id/p1_item_center"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/p1_item2"
+                android:layout_width="62dp"
+                android:layout_height="116dp"
+                android:src="@drawable/moc_p1_2"
+                app:layout_constraintBottom_toBottomOf="@+id/p1_item_center"
+                app:layout_constraintEnd_toStartOf="@+id/p1_item_center"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/p1_item_center"
+                android:layout_width="123dp"
+                android:layout_height="172dp"
+                android:src="@drawable/moc_p1_3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.364"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/p3_right_column_top"/>
+                app:layout_constraintVertical_bias="0.0" />
 
-            <!-- Правая верхняя колонка (2 квадрата) -->
-            <FrameLayout
-                android:id="@+id/p3_right_column_top"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:background="#334"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintStart_toEndOf="@id/p3_big_left"
+            <ImageView
+                android:id="@+id/p1_item3"
+                android:layout_width="60dp"
+                android:layout_height="53dp"
+                android:src="@drawable/moc_p1_4"
+                app:layout_constraintBottom_toTopOf="@+id/p1_item5"
+                app:layout_constraintStart_toStartOf="@+id/p1_item5"
+                app:layout_constraintTop_toTopOf="@+id/p1_item_center"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/p1_item5"
+                android:layout_width="124dp"
+                android:layout_height="115dp"
+
+                android:src="@drawable/moc_p1_6"
+                app:layout_constraintBottom_toBottomOf="@+id/p1_item_center"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintStart_toEndOf="@+id/p1_item_center" />
 
-            <FrameLayout
-                android:id="@+id/p3_right_column_bottom"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:background="#445"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintStart_toStartOf="@id/p3_right_column_top"
-                app:layout_constraintEnd_toEndOf="@id/p3_right_column_top"
-                app:layout_constraintTop_toBottomOf="@id/p3_right_column_top"/>
+            <ImageView
+                android:id="@+id/p1_item4"
+                android:layout_width="59dp"
+                android:layout_height="53dp"
 
-            <!-- Большой правый длинный прямоугольник -->
-            <FrameLayout
-                android:id="@+id/p3_big_right"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:background="#556"
-                app:layout_constraintStart_toStartOf="@id/p3_right_column_bottom"
-                app:layout_constraintEnd_toEndOf="@id/p3_right_column_bottom"
-                app:layout_constraintTop_toBottomOf="@id/p3_right_column_bottom"
-                app:layout_constraintBottom_toBottomOf="parent"/>
-
-            <!-- Нижняя строка — 3 маленьких блока -->
-            <FrameLayout
-                android:id="@+id/p3_small1"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:background="#667"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintTop_toBottomOf="@id/p3_big_left"
-                app:layout_constraintStart_toStartOf="@id/p3_big_left"
-                app:layout_constraintEnd_toStartOf="@id/p3_small2"/>
-
-            <FrameLayout
-                android:id="@+id/p3_small2"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:background="#778"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintTop_toTopOf="@id/p3_small1"
-                app:layout_constraintStart_toEndOf="@id/p3_small1"
-                app:layout_constraintEnd_toStartOf="@id/p3_small3"/>
-
-            <FrameLayout
-                android:id="@+id/p3_small3"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:background="#889"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintTop_toTopOf="@id/p3_small1"
-                app:layout_constraintStart_toEndOf="@id/p3_small2"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                android:src="@drawable/moc_p1_5"
+                app:layout_constraintBottom_toTopOf="@+id/p1_item5"
+                app:layout_constraintEnd_toEndOf="@+id/p1_item5"
+                app:layout_constraintTop_toTopOf="@+id/p1_item3"
+                app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

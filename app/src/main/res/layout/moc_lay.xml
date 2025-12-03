@@ -11,7 +11,7 @@
         android:padding="16dp">
 
          PAGE 1
-        <include layout="@layout/page_1_layout"/>
+        <include layout="@layout/page_1_layout" />
 
          PAGE 2
         <include layout="@layout/page_2_layout"/>
