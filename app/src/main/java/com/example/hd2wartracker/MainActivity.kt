@@ -19,6 +19,7 @@ class MainActivity : Activity() {
         val btnSwitch = findViewById<ImageButton>(R.id.moc_button) // Новая кнопка
 
 
+
         totalMedalsText.text = "20000"
         progressBar.progress = 65
 

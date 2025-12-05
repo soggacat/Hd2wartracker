@@ -17,8 +17,9 @@
 
                  <ImageButton
                 android:layout_width="60dp"
+                android:id="@+id/moc_backbutton"
                 android:layout_height="60dp"
-                android:src="@drawable/Vector">
+                android:src="@drawable/vector">
             </ImageButton>
 
                  <TextView
