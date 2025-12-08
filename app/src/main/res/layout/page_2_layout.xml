@@ -44,7 +44,7 @@
                 android:id="@+id/p1_item1"
                 android:layout_width="62dp"
                 android:layout_height="55dp"
-                android:src="@drawable/moc_p1_1"
+                android:src="@drawable/ph"
                 android:background="@null"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toTopOf="@+id/p1_item2"
@@ -60,7 +60,7 @@
                 android:layout_height="172dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/moc_p1_3"
+                android:src="@drawable/ph"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/p1_item2"
                 app:layout_constraintStart_toEndOf="@+id/p1_item5"
@@ -72,7 +72,7 @@
                 android:layout_height="53dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/moc_p1_4"
+                android:src="@drawable/ph"
                 app:layout_constraintBottom_toTopOf="@+id/p1_item5"
                 app:layout_constraintStart_toStartOf="@+id/p1_item5"
                 app:layout_constraintTop_toTopOf="@+id/p1_item_center"
@@ -84,7 +84,7 @@
                 android:layout_height="115dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/moc_p1_6"
+                android:src="@drawable/ph"
                 app:layout_constraintBottom_toBottomOf="@+id/p1_item_center"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -94,7 +94,7 @@
                 android:layout_height="53dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/moc_p1_5"
+                android:src="@drawable/ph"
                 app:layout_constraintBottom_toTopOf="@+id/p1_item5"
                 app:layout_constraintEnd_toEndOf="@+id/p1_item5"
                 app:layout_constraintTop_toTopOf="@+id/p1_item3"
@@ -106,7 +106,7 @@
                 android:layout_height="116dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/moc_p1_2"
+                android:src="@drawable/ph"
                 app:layout_constraintBottom_toBottomOf="@+id/p1_item_center"
                 app:layout_constraintEnd_toEndOf="parent" />
 
