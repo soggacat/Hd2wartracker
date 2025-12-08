@@ -15,20 +15,44 @@ class moc_screen : Activity() {
     private val pressed = mutableSetOf<Int>()
 
     private val pressedImages = listOf(
-        R.drawable.p1_item1d,
-        R.drawable.p1_item2d,
-        R.drawable.p1_item3d,
-        R.drawable.p1_item_centerd  ,
-        R.drawable.p1_item4d,
-        R.drawable.p1_item5d
+        R.drawable.moc_p1_item1d,
+        R.drawable.moc_p1_item2d,
+        R.drawable.moc_p1_item4d,
+        R.drawable.moc_p1_item3d,
+        R.drawable.moc_p1_item5d,
+        R.drawable.moc_p1_item6d,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
     )
     private val normalImages = listOf(
         R.drawable.moc_p1_1,
         R.drawable.moc_p1_2,
         R.drawable.moc_p1_4,
-        R.drawable.moc_p1_3  ,
+        R.drawable.moc_p1_3,
         R.drawable.moc_p1_5,
-        R.drawable.moc_p1_6
+        R.drawable.moc_p1_6,
+        R.drawable.moc_p2_1,
+        R.drawable.moc_p2_2,
+        R.drawable.moc_p2_4,
+        R.drawable.moc_p2_3,
+        R.drawable.moc_p2_5,
+        R.drawable.moc_p2_6,
+        R.drawable.moc_p3_1,
+        R.drawable.moc_p3_4,
+        R.drawable.moc_p3_5,
+        R.drawable.moc_p3_3,
+        R.drawable.moc_p3_2,
+        R.drawable.moc_p3_6,
     )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +68,18 @@ class moc_screen : Activity() {
             findViewById<ImageButton>(R.id.p1_item_center),
             findViewById<ImageButton>(R.id.p1_item4),
             findViewById<ImageButton>(R.id.p1_item5),
+            findViewById<ImageButton>(R.id.p2_item1),
+            findViewById<ImageButton>(R.id.p2_item2),
+            findViewById<ImageButton>(R.id.p2_item3),
+            findViewById<ImageButton>(R.id.p2_item_center),
+            findViewById<ImageButton>(R.id.p2_item4),
+            findViewById<ImageButton>(R.id.p2_item5),
+            findViewById<ImageButton>(R.id.p3_item1),
+            findViewById<ImageButton>(R.id.p3_item2),
+            findViewById<ImageButton>(R.id.p3_item3),
+            findViewById<ImageButton>(R.id.p3_item_center),
+            findViewById<ImageButton>(R.id.p3_item4),
+            findViewById<ImageButton>(R.id.p3_item5)
         )
 
         buttons.forEachIndexed { index, button ->

@@ -9,19 +9,19 @@
     android:background="@android:color/transparent">
 
     <!-- Заголовок PAGE 1 -->
+
     <TextView
         android:id="@+id/page1_title"
         android:layout_width="93dp"
         android:layout_height="25dp"
         android:background="@drawable/card_bg"
         android:paddingStart="20dp"
-        android:text="Page 2"
+        android:text="Page 1"
         android:textColor="#FFE600"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <FrameLayout
         android:id="@+id/page1_frame"
@@ -41,85 +41,81 @@
 
 
             <ImageButton
-                android:id="@+id/p2_item4"
+                android:id="@+id/p1_item1"
                 android:layout_width="62dp"
                 android:layout_height="55dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/moc_p2_4"
-                app:layout_constraintBottom_toTopOf="@+id/p2_item5"
-                app:layout_constraintEnd_toEndOf="@+id/p2_item5"
+                android:src="@drawable/ph"
+                app:layout_constraintBottom_toTopOf="@+id/p1_item2"
+                app:layout_constraintEnd_toEndOf="@+id/p1_item2"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/p2_item5"
-                app:layout_constraintTop_toTopOf="@+id/p2_item_center"
+                app:layout_constraintStart_toStartOf="@+id/p1_item2"
+                app:layout_constraintTop_toTopOf="@+id/p1_item1"
                 app:layout_constraintVertical_bias="0.0" />
 
             <ImageButton
-                android:id="@+id/p2_item_center"
+                android:id="@+id/p1_item2"
+                android:layout_width="62dp"
+                android:layout_height="116dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/ph"
+                app:layout_constraintBottom_toBottomOf="@+id/p1_item_center"
+                app:layout_constraintEnd_toStartOf="@+id/p1_item_center"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
+                android:id="@+id/p1_item_center"
                 android:layout_width="123dp"
                 android:layout_height="172dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/moc_p2_6"
+                android:src="@drawable/ph"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.666"
+                app:layout_constraintHorizontal_bias="0.343"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.625" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <ImageButton
-                android:id="@+id/p2_item1"
+                android:id="@+id/p1_item3"
                 android:layout_width="60dp"
                 android:layout_height="53dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/moc_p2_1"
-                app:layout_constraintBottom_toTopOf="@+id/p2_item3"
-                app:layout_constraintStart_toStartOf="@+id/p2_item3"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:src="@drawable/ph"
+                app:layout_constraintBottom_toTopOf="@+id/p1_item5"
+                app:layout_constraintStart_toStartOf="@+id/p1_item5"
+                app:layout_constraintTop_toTopOf="@+id/p1_item_center"
+                app:layout_constraintVertical_bias="0.0" />
 
             <ImageButton
-                android:id="@+id/p2_item3"
+                android:id="@+id/p1_item5"
                 android:layout_width="124dp"
                 android:layout_height="115dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/moc_p2_3"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/p2_item_center"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/p2_item2" />
+                android:src="@drawable/ph"
+                app:layout_constraintBottom_toBottomOf="@+id/p1_item_center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/p1_item_center" />
 
             <ImageButton
-                android:id="@+id/p2_item2"
+                android:id="@+id/p1_item4"
                 android:layout_width="59dp"
                 android:layout_height="53dp"
-                android:layout_marginTop="4dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/moc_p2_2"
-                app:layout_constraintEnd_toEndOf="@+id/p2_item3"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/p2_item1"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageButton
-                android:id="@+id/p2_item5"
-                android:layout_width="62dp"
-                android:layout_height="112dp"
-                android:background="@null"
-                android:scaleType="fitXY"
-                android:src="@drawable/moc_p2_5"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.4"
-                app:layout_constraintStart_toEndOf="@+id/p2_item_center"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.955" />
+                android:src="@drawable/ph"
+                app:layout_constraintBottom_toTopOf="@+id/p1_item5"
+                app:layout_constraintEnd_toEndOf="@+id/p1_item5"
+                app:layout_constraintTop_toTopOf="@+id/p1_item3"
+                app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
