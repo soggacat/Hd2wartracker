@@ -10,30 +10,48 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp">
+
              <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                 android:background="@drawable/card_bg">
+                 android:layout_height="match_parent">
 
                  <ImageButton
                 android:layout_width="60dp"
                 android:id="@+id/moc_backbutton"
                 android:layout_height="60dp"
                 android:src="@drawable/vector">
-            </ImageButton>
+                 </ImageButton>
 
-                 <TextView
-                     android:layout_width="92dp"
-                     android:layout_height="wrap_content"
-                     android:layout_gravity="right"
-                     android:layout_weight="1"
-                     android:paddingTop="13dp"
-                     android:paddingLeft="17dp"
-                     android:fontFamily="@font/goldman_font"
-                     android:text="MASTERS OF CEREMONY"
-                     android:textColor="#FFD700"
-                     android:textSize="20sp" />
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:paddingTop="10dp"
+                     android:background="@drawable/card_bg"
+                     android:orientation="vertical">
+
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="10dp"
+                         android:layout_gravity="top"
+                         android:layout_weight="1"
+                         android:fontFamily="@font/goldman_font"
+                         android:paddingLeft="17dp"
+                         android:text="MASTERS OF CEREMONY"
+                         android:textColor="#FFD700"
+                         android:textSize="20sp" />
+
+                     <ProgressBar
+                         android:id="@+id/moc_progressbar"
+                         style="?android:attr/progressBarStyleHorizontal"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:max="100"
+                         android:progress="0"
+                         android:progressDrawable="@drawable/pg_gold" />
+                 </LinearLayout>
+
              </LinearLayout>
+
          PAGE 1
         <include layout="@layout/page_1_layout" />
 

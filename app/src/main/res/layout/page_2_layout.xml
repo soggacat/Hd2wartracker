@@ -11,14 +11,16 @@
     <!-- Заголовок PAGE 1 -->
     <TextView
         android:id="@+id/page1_title"
+        android:layout_width="93dp"
+        android:layout_height="25dp"
+        android:background="@drawable/card_bg"
+        android:paddingStart="20dp"
         android:text="Page 2"
         android:textColor="#FFE600"
-        android:textStyle="bold"
         android:textSize="18sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <FrameLayout
@@ -38,11 +40,13 @@
             android:layout_height="180dp">
 
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/p1_item1"
                 android:layout_width="62dp"
                 android:layout_height="55dp"
                 android:src="@drawable/moc_p1_1"
+                android:background="@null"
+                android:scaleType="fitXY"
                 app:layout_constraintBottom_toTopOf="@+id/p1_item2"
                 app:layout_constraintEnd_toEndOf="@+id/p1_item2"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -50,60 +54,64 @@
                 app:layout_constraintTop_toTopOf="@+id/p1_item_center"
                 app:layout_constraintVertical_bias="0.0" />
 
-            <ImageView
-                android:id="@+id/p1_item2"
-                android:layout_width="62dp"
-                android:layout_height="116dp"
-                android:src="@drawable/moc_p1_2"
-                app:layout_constraintBottom_toBottomOf="@+id/p1_item_center"
-                app:layout_constraintEnd_toStartOf="@+id/p1_item_center"
-                app:layout_constraintHorizontal_bias="0.8"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <ImageView
+            <ImageButton
                 android:id="@+id/p1_item_center"
                 android:layout_width="123dp"
                 android:layout_height="172dp"
+                android:background="@null"
+                android:scaleType="fitXY"
                 android:src="@drawable/moc_p1_3"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.364"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintEnd_toStartOf="@+id/p1_item2"
+                app:layout_constraintStart_toEndOf="@+id/p1_item5"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/p1_item3"
                 android:layout_width="60dp"
                 android:layout_height="53dp"
+                android:background="@null"
+                android:scaleType="fitXY"
                 android:src="@drawable/moc_p1_4"
                 app:layout_constraintBottom_toTopOf="@+id/p1_item5"
                 app:layout_constraintStart_toStartOf="@+id/p1_item5"
                 app:layout_constraintTop_toTopOf="@+id/p1_item_center"
                 app:layout_constraintVertical_bias="0.0" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/p1_item5"
                 android:layout_width="124dp"
                 android:layout_height="115dp"
-
+                android:background="@null"
+                android:scaleType="fitXY"
                 android:src="@drawable/moc_p1_6"
                 app:layout_constraintBottom_toBottomOf="@+id/p1_item_center"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/p1_item_center" />
+                app:layout_constraintStart_toStartOf="parent" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/p1_item4"
                 android:layout_width="59dp"
                 android:layout_height="53dp"
-
+                android:background="@null"
+                android:scaleType="fitXY"
                 android:src="@drawable/moc_p1_5"
                 app:layout_constraintBottom_toTopOf="@+id/p1_item5"
                 app:layout_constraintEnd_toEndOf="@+id/p1_item5"
                 app:layout_constraintTop_toTopOf="@+id/p1_item3"
                 app:layout_constraintVertical_bias="0.0" />
 
+            <ImageButton
+                android:id="@+id/p1_item2"
+                android:layout_width="62dp"
+                android:layout_height="116dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/moc_p1_2"
+                app:layout_constraintBottom_toBottomOf="@+id/p1_item_center"
+                app:layout_constraintEnd_toEndOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,9 +22,10 @@
                 android:id="@+id/moc_button"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
+                android:background="@null"
+                android:scaleType="fitXY"
                 android:layout_gravity="center"
-                android:src="@drawable/moc"
-                android:background="@android:color/transparent"/>
+                android:src="@drawable/moc" />
 
             <LinearLayout
     android:layout_width="match_parent"

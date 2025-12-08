@@ -65,12 +65,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Masters of the ceremony"
-            android:textColor="#FFD700"
+            android:layout_marginBottom="16dp"
             android:fontFamily="@font/goldman_font"
+            android:text="Masters of ceremony"
+            android:textColor="#FFD700"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp" />
+            android:textStyle="bold" />
 
 
         <include layout="@layout/card_m"
