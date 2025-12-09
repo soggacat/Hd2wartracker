@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.hd2wartracker"
-        minSdk = 36
+        minSdk = 23
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
@@ -49,6 +49,9 @@ dependencies {
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.11.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
