@@ -25,8 +25,8 @@
 
     <FrameLayout
         android:id="@+id/page1_frame"
-        android:layout_width="348dp"
-        android:layout_height="203dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/card_bg"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
