@@ -17,6 +17,7 @@ class MainActivity : Activity() {
         val progressBar = findViewById<ProgressBar>(R.id.mainProgressBar)
         val btnSwitch = findViewById<ImageButton>(R.id.moc_button)
         val btnVc = findViewById<ImageButton>(R.id.vc_button)
+        val btnUl = findViewById<ImageButton>(R.id.url_button)
 
         totalMedalsText.text = "20000"
         progressBar.progress = 10
@@ -35,6 +36,17 @@ class MainActivity : Activity() {
         // Переход на vc_screen
         btnVc.setOnClickListener {
             val intent = Intent(this, vc_screen::class.java)
+
+            // Передача данных (опционально)
+            intent.putExtra("totalMedals", totalMedalsText.text.toString())
+            intent.putExtra("progress", progressBar.progress)
+
+            startActivity(intent)
+        }
+
+
+        btnUl.setOnClickListener {
+            val intent = Intent(this, ul_screen::class.java)
 
             // Передача данных (опционально)
             intent.putExtra("totalMedals", totalMedalsText.text.toString())

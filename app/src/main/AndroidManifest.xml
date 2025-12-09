@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hd2wartracker">
         <activity
+            android:name=".ul_screen"
+            android:exported="false">
+        </activity>
+        <activity
             android:name=".vc_screen"
             android:exported="false">
         </activity>
