@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp"
     android:background="@android:color/transparent">
 
     <!-- Заголовок PAGE 1 -->
@@ -19,7 +18,7 @@
         android:textColor="#FFE600"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/page1_frame"
         app:layout_constraintTop_toTopOf="parent" />
 
 

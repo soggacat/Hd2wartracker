@@ -1,65 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/vc_bg" >
+    android:orientation="vertical"
+    android:background="@drawable/vc_bg"
+    >
 
-    <LinearLayout
-        android:orientation="vertical"
+    <!-- ФИКСИРОВАННЫЙ ЗАГОЛОВОК (не скролится) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/moc_backbutton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/vector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:background="@drawable/card_bg"
+            android:paddingTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/moc_backbutton"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/goldman_font"
+                android:text="VIPER COMMANDOS"
+                android:textColor="#FFD700"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/vc_progressbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.347"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ProgressBar
+                android:id="@+id/vc_progressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/pg_gold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- СКРОЛИРУЕМАЯ ЧАСТЬ -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <ImageButton
-                android:layout_width="60dp"
-                android:id="@+id/moc_backbutton"
-                android:layout_height="60dp"
-                android:src="@drawable/vector">
-            </ImageButton>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="10dp"
-                android:background="@drawable/card_bg"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp"
-                    android:layout_gravity="top"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/goldman_font"
-                    android:paddingLeft="17dp"
-                    android:text="VIPER COMMANDOS"
-                    android:textColor="#FFD700"
-                    android:textSize="20sp" />
-
-                <ProgressBar
-                    android:id="@+id/vc_progressbar"
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:max="100"
-                    android:progress="0"
-                    android:progressDrawable="@drawable/pg_gold" />
-            </LinearLayout>
+            <include layout="@layout/vc_1_layout"/>
+            <include layout="@layout/vc_2_layout"/>
+            <include layout="@layout/vc_3_layout"/>
 
         </LinearLayout>
-
-        PAGE 1
-        <include layout="@layout/vc_1_layout" />
-
-        PAGE 2
-        <include layout="@layout/vc_2_layout"/>
-
-        PAGE 3
-        <include layout="@layout/vc_3_layout"/>
-
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+</LinearLayout>
