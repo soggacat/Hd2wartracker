@@ -9,10 +9,13 @@ import android.animation.ObjectAnimator
 
 class moc_screen : Activity() {
 
-    private lateinit var buttons:List<ImageButton>
+    private lateinit var buttons: List<ImageButton>
     private lateinit var progressBar: ProgressBar
 
     private val pressed = mutableSetOf<Int>()
+
+    private val prefsName = "moc_prefs"
+    private val prefsKey = "pressed_buttons"
 
     private val pressedImages = listOf(
         R.drawable.moc_p1_item1d,
@@ -33,8 +36,8 @@ class moc_screen : Activity() {
         R.drawable.moc_p3_6d,
         R.drawable.moc_p3_4d,
         R.drawable.moc_p3_5d,
+    )
 
-        )
     private val normalImages = listOf(
         R.drawable.moc_p1_1,
         R.drawable.moc_p1_2,
@@ -55,6 +58,7 @@ class moc_screen : Activity() {
         R.drawable.moc_p3_2,
         R.drawable.moc_p3_6,
     )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.moc_lay)
@@ -63,61 +67,109 @@ class moc_screen : Activity() {
         progressBar = findViewById(R.id.moc_progressbar)
 
         buttons = listOf(
-            findViewById<ImageButton>(R.id.p1_item1),
-            findViewById<ImageButton>(R.id.p1_item2),
-            findViewById<ImageButton>(R.id.p1_item3),
-            findViewById<ImageButton>(R.id.p1_item_center),
-            findViewById<ImageButton>(R.id.p1_item4),
-            findViewById<ImageButton>(R.id.p1_item5),
-            findViewById<ImageButton>(R.id.p2_item1),
-            findViewById<ImageButton>(R.id.p2_item2),
-            findViewById<ImageButton>(R.id.p2_item3),
-            findViewById<ImageButton>(R.id.p2_item_center),
-            findViewById<ImageButton>(R.id.p2_item4),
-            findViewById<ImageButton>(R.id.p2_item5),
-            findViewById<ImageButton>(R.id.p3_item1),
-            findViewById<ImageButton>(R.id.p3_item2),
-            findViewById<ImageButton>(R.id.p3_item3),
-            findViewById<ImageButton>(R.id.p3_item_center),
-            findViewById<ImageButton>(R.id.p3_item4),
-            findViewById<ImageButton>(R.id.p3_item5)
+            findViewById(R.id.p1_item1),
+            findViewById(R.id.p1_item2),
+            findViewById(R.id.p1_item3),
+            findViewById(R.id.p1_item_center),
+            findViewById(R.id.p1_item4),
+            findViewById(R.id.p1_item5),
+            findViewById(R.id.p2_item1),
+            findViewById(R.id.p2_item2),
+            findViewById(R.id.p2_item3),
+            findViewById(R.id.p2_item_center),
+            findViewById(R.id.p2_item4),
+            findViewById(R.id.p2_item5),
+            findViewById(R.id.p3_item1),
+            findViewById(R.id.p3_item2),
+            findViewById(R.id.p3_item3),
+            findViewById(R.id.p3_item_center),
+            findViewById(R.id.p3_item4),
+            findViewById(R.id.p3_item5)
         )
+
+        loadState()
+        restoreButtons()
 
         buttons.forEachIndexed { index, button ->
             button.setOnClickListener {
                 handleButtonPress(index, button)
-
             }
         }
 
         btnSwitch.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, MainActivity::class.java))
         }
-
-
     }
-    private fun handleButtonPress(index: Int, button: ImageButton) {
 
+    private fun handleButtonPress(index: Int, button: ImageButton) {
         if (pressed.contains(index)) {
             pressed.remove(index)
             button.setImageResource(normalImages[index])
-        }
-        else{
+        } else {
             pressed.add(index)
             button.setImageResource(pressedImages[index])
         }
 
+        updateProgress(true)
+    }
 
+    private fun updateProgress(animated: Boolean) {
         val part = 100f / buttons.size
         val newProgress = (pressed.size * part).toInt()
 
-        animateProgressBar(progressBar, newProgress, 300)
-
+        if (animated) {
+            animateProgressBar(progressBar, newProgress, 300)
+        } else {
+            progressBar.progress = newProgress
+        }
     }
-    private fun animateProgressBar(progressBar: ProgressBar,toProgress: Int, duration: Long){
-        val animator = ObjectAnimator.ofInt(progressBar,"progress",progressBar.progress, toProgress)
+
+    private fun restoreButtons() {
+        buttons.forEachIndexed { index, button ->
+            if (pressed.contains(index)) {
+                button.setImageResource(pressedImages[index])
+            } else {
+                button.setImageResource(normalImages[index])
+            }
+        }
+        updateProgress(false)
+    }
+
+    private fun animateProgressBar(
+        progressBar: ProgressBar,
+        toProgress: Int,
+        duration: Long
+    ) {
+        val animator = ObjectAnimator.ofInt(
+            progressBar,
+            "progress",
+            progressBar.progress,
+            toProgress
+        )
         animator.duration = duration
         animator.start()
+    }
+
+    private fun saveState() {
+        val prefs = getSharedPreferences(prefsName, MODE_PRIVATE)
+        prefs.edit()
+            .putStringSet(
+                prefsKey,
+                pressed.map { it.toString() }.toSet()
+            )
+            .apply()
+    }
+
+    private fun loadState() {
+        val prefs = getSharedPreferences(prefsName, MODE_PRIVATE)
+        val saved = prefs.getStringSet(prefsKey, emptySet())!!
+
+        pressed.clear()
+        pressed.addAll(saved.map { it.toInt() })
+    }
+
+    override fun onPause() {
+        super.onPause()
+        saveState()
     }
 }

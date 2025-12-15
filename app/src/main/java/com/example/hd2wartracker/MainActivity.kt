@@ -19,8 +19,7 @@ class MainActivity : Activity() {
         val btnVc = findViewById<ImageButton>(R.id.vc_button)
         val btnUl = findViewById<ImageButton>(R.id.url_button)
 
-        totalMedalsText.text = "20000"
-        progressBar.progress = 10
+
 
 
         btnSwitch.setOnClickListener {
