@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
-    android:padding="16dp">
+    android:orientation="vertical"
+    android:background="#000000">
 
-    <LinearLayout
+    <!-- ФИКСИРОВАННЫЙ ЗАГОЛОВОК (не скролится) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
+        android:padding="16dp"
+        android:paddingBottom="0dp"
+        android:background="@drawable/card_bg">
 
         <TextView
+            android:id="@+id/warbonds_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:fontFamily="@font/goldman_font"
-            android:layout_marginBottom="8dp"
             android:text="WARBONDS"
             android:textColor="#FFD700"
             android:textSize="34dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
+            android:id="@+id/medals_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:layout_marginBottom="24dp">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/warbonds_title">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -48,8 +56,11 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/medal"></ImageView>
         </LinearLayout>
-
 
         <ProgressBar
             android:id="@+id/mainProgressBar"
@@ -59,93 +70,100 @@
             android:progress="65"
             android:max="100"
             android:progressDrawable="@drawable/pg_gold"
-            android:layout_marginBottom="32dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/medals_container" />
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
+    <!-- СКРОЛИРУЕМАЯ ЧАСТЬ -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="@font/goldman_font"
-            android:text="Masters of ceremony"
-            android:textColor="#FFD700"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:paddingTop="0dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/goldman_font"
+                android:text="Masters of ceremony"
+                android:textColor="#FFD700"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-        <include layout="@layout/card_m"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <include layout="@layout/card_m"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"
+                android:layout_marginVertical="24dp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Viper commandos"
+                android:textColor="#FFD700"
+                android:fontFamily="@font/goldman_font"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
 
+            <include layout="@layout/card_vc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#000000"
-            android:layout_marginVertical="24dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_marginVertical="24dp"
+                android:background="#000000" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/goldman_font"
+                android:text="Urban legends"
+                android:textColor="#FFD700"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Viper commandos"
-            android:textColor="#FFD700"
-            android:fontFamily="@font/goldman_font"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp" />
+            <include layout="@layout/card_ul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_marginVertical="24dp"
+                android:background="#000000" />
 
-        <include layout="@layout/card_vc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Borderline justice"
+                android:textColor="#FFD700"
+                android:fontFamily="@font/goldman_font"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
 
+            <include layout="@layout/card_bj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="33dp"
-            android:layout_marginVertical="24dp"
-            android:background="#000000" />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/goldman_font"
-            android:text="Urban legends"
-            android:textColor="#FFD700"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp" />
-
-
-        <include layout="@layout/card_ul"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="33dp"
-            android:layout_marginVertical="24dp"
-            android:background="#000000" />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Borderline justice"
-            android:textColor="#FFD700"
-            android:fontFamily="@font/goldman_font"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp" />
-
-
-        <include layout="@layout/card_bj"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-</ScrollView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
