@@ -28,14 +28,14 @@ class vc_screen : Activity() {
     )
 
     private val pressedImages = listOf(
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph
+        R.drawable.vc_p1_1d,
+        R.drawable.vc_p1_2d,
+        R.drawable.vc_p1_3d,
+        R.drawable.vc_p1_4d,
+        R.drawable.vc_p1_5d,
+        R.drawable.vc_p1_6d,
+        R.drawable.vc_p1_7d,
+        R.drawable.vc_p1_8d
     )
 
     private val normalImages = listOf(
