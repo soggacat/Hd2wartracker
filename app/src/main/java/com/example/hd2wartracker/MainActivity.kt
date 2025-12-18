@@ -10,26 +10,33 @@ import android.widget.TextView
 
 class MainActivity : Activity() {
 
-    private val TOTAL_MOC = 18
+    // ==== Константы ====
     private val MOC_PREFS = "moc_prefs"
-    private val MOC_KEY = "pressed_buttons"
+    private val PRESSED_KEY = "pressed_buttons"
+    private val MEDALS_KEY = "moc_medals"
 
+    private val TOTAL_MOC = 18
+    private val MAX_MOC_MEDALS = 641
+
+    // ==== UI ====
     private lateinit var mocProgressBar: ProgressBar
     private lateinit var mocCompletedText: TextView
+    private lateinit var mocMedalsText: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // ==== UI ====
+        // --- Карточка MOC ---
+        mocProgressBar = findViewById(R.id.moc_card_ProgressBar)
+        mocCompletedText = findViewById(R.id.moc_comp)
+        mocMedalsText = findViewById(R.id.moc_medals)
+
+        // --- Кнопки ---
         val btnMoc = findViewById<ImageButton>(R.id.moc_button)
         val btnVc = findViewById<ImageButton>(R.id.vc_button)
         val btnUl = findViewById<ImageButton>(R.id.url_button)
 
-        mocProgressBar = findViewById(R.id.moc_card_ProgressBar)
-        mocCompletedText = findViewById(R.id.moc_comp)
-
-        // ==== Переходы ====
         btnMoc.setOnClickListener {
             startActivity(Intent(this, moc_screen::class.java))
         }
@@ -51,16 +58,23 @@ class MainActivity : Activity() {
     // ==== Обновление карточки MOC ====
     private fun updateMocCard() {
         val prefs = getSharedPreferences(MOC_PREFS, MODE_PRIVATE)
-        val pressed = prefs.getStringSet(MOC_KEY, emptySet()) ?: emptySet()
 
+        // Сколько выполнено
+        val pressed = prefs.getStringSet(PRESSED_KEY, emptySet()) ?: emptySet()
         val completed = pressed.size
         val progress = completed * 100 / TOTAL_MOC
 
-        animateProgressBar(mocProgressBar, progress, 300)
+        // Сколько медалей
+        val medals = prefs.getInt(MEDALS_KEY, 0)
+
+        // UI
         mocCompletedText.text = "Completed $completed/$TOTAL_MOC"
+        mocMedalsText.text = "Medals: $medals/$MAX_MOC_MEDALS"
+
+        animateProgressBar(mocProgressBar, progress, 300)
     }
 
-    // ==== Анимация прогресса ====
+    // ==== Анимация ====
     private fun animateProgressBar(
         progressBar: ProgressBar,
         toProgress: Int,

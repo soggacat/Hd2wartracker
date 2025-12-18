@@ -1,11 +1,11 @@
 package com.example.hd2wartracker
 
+import android.animation.ObjectAnimator
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.ProgressBar
-import android.animation.ObjectAnimator
 
 class moc_screen : Activity() {
 
@@ -13,9 +13,20 @@ class moc_screen : Activity() {
     private lateinit var progressBar: ProgressBar
 
     private val pressed = mutableSetOf<Int>()
+    private var totalMedals = 0
 
     private val prefsName = "moc_prefs"
-    private val prefsKey = "pressed_buttons"
+    private val pressedKey = "pressed_buttons"
+    private val medalsKey = "moc_medals"
+
+    private val TOTAL = 18
+
+    // 💰 Медали за кнопку
+    private val medalsPerButton = listOf(
+        25, 25, 30, 40, 35, 50,
+        20, 20, 25, 40, 30, 35,
+        50, 45, 60, 80, 55, 70
+    )
 
     private val pressedImages = listOf(
         R.drawable.moc_p1_item1d,
@@ -63,8 +74,12 @@ class moc_screen : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.moc_lay)
 
-        val btnSwitch = findViewById<ImageButton>(R.id.moc_backbutton)
         progressBar = findViewById(R.id.moc_progressbar)
+
+        val btnBack = findViewById<ImageButton>(R.id.moc_backbutton)
+        btnBack.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+        }
 
         buttons = listOf(
             findViewById(R.id.p1_item1),
@@ -88,43 +103,45 @@ class moc_screen : Activity() {
         )
 
         loadState()
-        restoreButtons()
+        restoreUI()
 
         buttons.forEachIndexed { index, button ->
             button.setOnClickListener {
-                handleButtonPress(index, button)
+                handleButtonPress(index)
             }
-        }
-
-        btnSwitch.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
         }
     }
 
-    private fun handleButtonPress(index: Int, button: ImageButton) {
+    private fun handleButtonPress(index: Int) {
         if (pressed.contains(index)) {
             pressed.remove(index)
-            button.setImageResource(normalImages[index])
+            buttons[index].setImageResource(normalImages[index])
         } else {
             pressed.add(index)
-            button.setImageResource(pressedImages[index])
+            buttons[index].setImageResource(pressedImages[index])
         }
 
+        recalcMedals()
         updateProgress(true)
     }
 
-    private fun updateProgress(animated: Boolean) {
-        val part = 100f / buttons.size
-        val newProgress = (pressed.size * part).toInt()
-
-        if (animated) {
-            animateProgressBar(progressBar, newProgress, 300)
-        } else {
-            progressBar.progress = newProgress
-        }
+    // Пересчет медалей на основе pressed
+    private fun recalcMedals() {
+        totalMedals = pressed.sumOf { medalsPerButton[it] }
     }
 
-    private fun restoreButtons() {
+    private fun updateProgress(animated: Boolean) {
+        val progress = pressed.size * 100 / TOTAL
+        if (animated) animateProgress(progress) else progressBar.progress = progress
+    }
+
+    private fun animateProgress(to: Int) {
+        ObjectAnimator.ofInt(progressBar, "progress", progressBar.progress, to)
+            .setDuration(300)
+            .start()
+    }
+
+    private fun restoreUI() {
         buttons.forEachIndexed { index, button ->
             if (pressed.contains(index)) {
                 button.setImageResource(pressedImages[index])
@@ -132,40 +149,25 @@ class moc_screen : Activity() {
                 button.setImageResource(normalImages[index])
             }
         }
+        recalcMedals()
         updateProgress(false)
-    }
-
-    private fun animateProgressBar(
-        progressBar: ProgressBar,
-        toProgress: Int,
-        duration: Long
-    ) {
-        val animator = ObjectAnimator.ofInt(
-            progressBar,
-            "progress",
-            progressBar.progress,
-            toProgress
-        )
-        animator.duration = duration
-        animator.start()
     }
 
     private fun saveState() {
         val prefs = getSharedPreferences(prefsName, MODE_PRIVATE)
         prefs.edit()
-            .putStringSet(
-                prefsKey,
-                pressed.map { it.toString() }.toSet()
-            )
+            .putStringSet(pressedKey, pressed.map { it.toString() }.toSet())
+            .putInt(medalsKey, totalMedals)
             .apply()
     }
 
     private fun loadState() {
         val prefs = getSharedPreferences(prefsName, MODE_PRIVATE)
-        val saved = prefs.getStringSet(prefsKey, emptySet())!!
-
         pressed.clear()
-        pressed.addAll(saved.map { it.toInt() })
+        pressed.addAll(
+            prefs.getStringSet(pressedKey, emptySet())!!.map { it.toInt() }
+        )
+        recalcMedals()
     }
 
     override fun onPause() {

@@ -42,6 +42,7 @@
                     android:textSize="15sp" />
 
                 <TextView
+                    android:id="@+id/moc_medals"
                     android:layout_width="92dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
