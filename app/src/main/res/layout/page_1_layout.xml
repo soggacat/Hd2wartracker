@@ -9,7 +9,6 @@
 
     android:background="@android:color/transparent">
 
-    <!-- Заголовок PAGE 1 -->
 
     <TextView
         android:id="@+id/page1_title"
@@ -52,7 +51,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/p1_item2"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/p1_item2"
-                app:layout_constraintTop_toTopOf="@+id/p1_item1"
+                app:layout_constraintTop_toTopOf="@+id/p1_item_center"
                 app:layout_constraintVertical_bias="0.0" />
 
             <ImageButton

@@ -10,7 +10,6 @@ import android.widget.TextView
 
 class MainActivity : Activity() {
 
-    // ==== Константы ====
     private val MOC_PREFS = "moc_prefs"
     private val PRESSED_KEY = "pressed_buttons"
     private val MEDALS_KEY = "moc_medals"
@@ -18,7 +17,6 @@ class MainActivity : Activity() {
     private val TOTAL_MOC = 18
     private val MAX_MOC_MEDALS = 641
 
-    // ==== UI ====
     private lateinit var mocProgressBar: ProgressBar
     private lateinit var mocCompletedText: TextView
     private lateinit var mocMedalsText: TextView
@@ -27,12 +25,10 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // --- Карточка MOC ---
         mocProgressBar = findViewById(R.id.moc_card_ProgressBar)
         mocCompletedText = findViewById(R.id.moc_comp)
         mocMedalsText = findViewById(R.id.moc_medals)
 
-        // --- Кнопки ---
         val btnMoc = findViewById<ImageButton>(R.id.moc_button)
         val btnVc = findViewById<ImageButton>(R.id.vc_button)
         val btnUl = findViewById<ImageButton>(R.id.url_button)
@@ -55,26 +51,22 @@ class MainActivity : Activity() {
         updateMocCard()
     }
 
-    // ==== Обновление карточки MOC ====
     private fun updateMocCard() {
         val prefs = getSharedPreferences(MOC_PREFS, MODE_PRIVATE)
 
-        // Сколько выполнено
         val pressed = prefs.getStringSet(PRESSED_KEY, emptySet()) ?: emptySet()
         val completed = pressed.size
         val progress = completed * 100 / TOTAL_MOC
 
-        // Сколько медалей
+
         val medals = prefs.getInt(MEDALS_KEY, 0)
 
-        // UI
         mocCompletedText.text = "Completed $completed/$TOTAL_MOC"
         mocMedalsText.text = "Medals: $medals/$MAX_MOC_MEDALS"
 
         animateProgressBar(mocProgressBar, progress, 300)
     }
 
-    // ==== Анимация ====
     private fun animateProgressBar(
         progressBar: ProgressBar,
         toProgress: Int,

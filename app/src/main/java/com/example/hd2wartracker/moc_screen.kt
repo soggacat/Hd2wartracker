@@ -21,53 +21,56 @@ class moc_screen : Activity() {
 
     private val TOTAL = 18
 
-    // 💰 Медали за кнопку
     private val medalsPerButton = listOf(
-        25, 25, 30, 40, 35, 50,
-        20, 20, 25, 40, 30, 35,
-        50, 45, 60, 80, 55, 70
+        30, 8, 45, 2, 7, 35,
+        12, 8, 40, 55, 45, 2,
+        110, 25, 32, 55, 65, 65
     )
 
     private val pressedImages = listOf(
         R.drawable.moc_p1_item1d,
         R.drawable.moc_p1_item2d,
-        R.drawable.moc_p1_item4d,
         R.drawable.moc_p1_item3d,
+        R.drawable.moc_p1_item4d,
         R.drawable.moc_p1_item5d,
         R.drawable.moc_p1_item6d,
+
         R.drawable.moc_p2_1d,
         R.drawable.moc_p2_2d,
         R.drawable.moc_p2_3d,
         R.drawable.moc_p2_6d,
         R.drawable.moc_p2_4d,
         R.drawable.moc_p2_5d,
+
         R.drawable.moc_p3_1d,
         R.drawable.moc_p3_2d,
         R.drawable.moc_p2_1d,
-        R.drawable.moc_p3_6d,
         R.drawable.moc_p3_4d,
         R.drawable.moc_p3_5d,
+        R.drawable.moc_p3_6d,
     )
 
     private val normalImages = listOf(
         R.drawable.moc_p1_1,
         R.drawable.moc_p1_2,
-        R.drawable.moc_p1_4,
         R.drawable.moc_p1_3,
+        R.drawable.moc_p1_4,
         R.drawable.moc_p1_5,
         R.drawable.moc_p1_6,
+
         R.drawable.moc_p2_1,
         R.drawable.moc_p2_2,
         R.drawable.moc_p2_3,
         R.drawable.moc_p2_6,
         R.drawable.moc_p2_4,
         R.drawable.moc_p2_5,
+
         R.drawable.moc_p3_1,
         R.drawable.moc_p3_4,
         R.drawable.moc_p3_5,
-        R.drawable.moc_p3_3,
         R.drawable.moc_p3_2,
         R.drawable.moc_p3_6,
+        R.drawable.moc_p3_3,
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -84,22 +87,24 @@ class moc_screen : Activity() {
         buttons = listOf(
             findViewById(R.id.p1_item1),
             findViewById(R.id.p1_item2),
-            findViewById(R.id.p1_item3),
             findViewById(R.id.p1_item_center),
+            findViewById(R.id.p1_item3),
             findViewById(R.id.p1_item4),
             findViewById(R.id.p1_item5),
+
             findViewById(R.id.p2_item1),
             findViewById(R.id.p2_item2),
             findViewById(R.id.p2_item3),
             findViewById(R.id.p2_item_center),
             findViewById(R.id.p2_item4),
             findViewById(R.id.p2_item5),
+
             findViewById(R.id.p3_item1),
             findViewById(R.id.p3_item2),
             findViewById(R.id.p3_item3),
-            findViewById(R.id.p3_item_center),
             findViewById(R.id.p3_item4),
-            findViewById(R.id.p3_item5)
+            findViewById(R.id.p3_item5),
+            findViewById(R.id.p3_item_center)
         )
 
         loadState()
@@ -125,7 +130,6 @@ class moc_screen : Activity() {
         updateProgress(true)
     }
 
-    // Пересчет медалей на основе pressed
     private fun recalcMedals() {
         totalMedals = pressed.sumOf { medalsPerButton[it] }
     }
