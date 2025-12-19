@@ -34,88 +34,70 @@
         app:layout_constraintTop_toBottomOf="@id/page1_title">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/page1_grid"
+            android:id="@+id/page2_grid"
             android:layout_width="324dp"
             android:layout_height="180dp">
 
 
             <ImageButton
-                android:id="@+id/p2_item4"
+                android:id="@+id/bj_p2_1"
                 android:layout_width="62dp"
                 android:layout_height="55dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/moc_p2_4"
-                app:layout_constraintBottom_toTopOf="@+id/p2_item5"
-                app:layout_constraintEnd_toEndOf="@+id/p2_item5"
+                android:src="@drawable/ph"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/p2_item5"
-                app:layout_constraintTop_toTopOf="@+id/p2_item_center"
                 app:layout_constraintVertical_bias="0.0" />
 
             <ImageButton
-                android:id="@+id/p2_item_center"
+                android:id="@+id/bj_p2_2"
+                android:layout_width="62dp"
+                android:layout_height="116dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/ph"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="76dp" />
+
+            <ImageButton
+                android:id="@+id/bj_p2_3"
                 android:layout_width="123dp"
                 android:layout_height="172dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/moc_p2_6"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.666"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.625" />
+                android:src="@drawable/ph"
+                tools:layout_editor_absoluteX="70dp"
+                tools:layout_editor_absoluteY="4dp" />
 
             <ImageButton
-                android:id="@+id/p2_item1"
+                android:id="@+id/bj_p2_4"
                 android:layout_width="60dp"
                 android:layout_height="53dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/moc_p2_1"
-                app:layout_constraintBottom_toTopOf="@+id/p2_item3"
-                app:layout_constraintStart_toStartOf="@+id/p2_item3"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:src="@drawable/ph"
+                tools:layout_editor_absoluteX="224dp"
+                tools:layout_editor_absoluteY="21dp" />
 
             <ImageButton
-                android:id="@+id/p2_item3"
+                android:id="@+id/bj_p2_6"
                 android:layout_width="124dp"
                 android:layout_height="115dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/moc_p2_3"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/p2_item_center"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/p2_item2" />
+                android:src="@drawable/ph"
+                tools:layout_editor_absoluteX="203dp"
+                tools:layout_editor_absoluteY="94dp" />
 
             <ImageButton
-                android:id="@+id/p2_item2"
+                android:id="@+id/bj_p2_5"
                 android:layout_width="59dp"
                 android:layout_height="53dp"
-                android:layout_marginTop="4dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/moc_p2_2"
-                app:layout_constraintEnd_toEndOf="@+id/p2_item3"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/p2_item1"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageButton
-                android:id="@+id/p2_item5"
-                android:layout_width="62dp"
-                android:layout_height="112dp"
-                android:background="@null"
-                android:scaleType="fitXY"
-                android:src="@drawable/moc_p2_5"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.4"
-                app:layout_constraintStart_toEndOf="@+id/p2_item_center"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.955" />
+                android:src="@drawable/ph"
+                tools:layout_editor_absoluteX="268dp"
+                tools:layout_editor_absoluteY="22dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
