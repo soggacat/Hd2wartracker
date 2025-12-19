@@ -23,13 +23,29 @@ class vc_screen : Activity() {
 
     private val medalsPerButton = listOf(
         40, 20, 30, 8, 7, 2, 20, 8,
-        12, 8, 40, 55, 45, 2,
+        12, 8, 40, 55, 45, 2, 2, 2,
         110, 25, 32, 55, 65, 65
     )
 
     private val pressedImages = listOf(
         R.drawable.ph,
         R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+
         R.drawable.ph,
         R.drawable.ph,
         R.drawable.ph,
@@ -46,7 +62,23 @@ class vc_screen : Activity() {
         R.drawable.vc_p1_5,
         R.drawable.vc_p1_6,
         R.drawable.vc_p1_7,
-        R.drawable.vc_p1_8
+        R.drawable.vc_p1_8,
+
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
