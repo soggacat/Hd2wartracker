@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.ProgressBar
 
-class ul_screen : Activity() {
+class bj_screen : Activity() {
 
     private lateinit var buttons: List<ImageButton>
     private lateinit var progressBar: ProgressBar
@@ -19,16 +19,15 @@ class ul_screen : Activity() {
     private val pressedKey = "pressed_buttons"
     private val medalsKey = "medals"
 
-    private val TOTAL = 20
+    private val TOTAL = 18
+
     private val medalsPerButton = listOf(
-        40, 20, 30, 8, 7, 2, 7, 2,
+        40, 20, 30, 8, 7, 2,
         12, 8, 40, 55, 45, 2,
         110, 25, 32, 55, 65, 65
     )
 
     private val pressedImages = listOf(
-        R.drawable.ph,
-        R.drawable.ph,
         R.drawable.ph,
         R.drawable.ph,
         R.drawable.ph,
@@ -60,8 +59,6 @@ class ul_screen : Activity() {
         R.drawable.ph,
         R.drawable.ph,
         R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
 
 
         R.drawable.ph,
@@ -82,9 +79,9 @@ class ul_screen : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.ul_layout)
+        setContentView(R.layout.bj_lay)
 
-        progressBar = findViewById(R.id.ul_progressbar)
+        progressBar = findViewById(R.id.bj_progressbar)
 
         val btnBack = findViewById<ImageButton>(R.id.moc_backbutton)
         btnBack.setOnClickListener {
@@ -98,8 +95,6 @@ class ul_screen : Activity() {
             findViewById(R.id.ul_p1_4),
             findViewById(R.id.ul_p1_5),
             findViewById(R.id.ul_p1_6),
-            findViewById(R.id.ul_p1_7),
-            findViewById(R.id.ul_p1_8),
 
             findViewById(R.id.ul_p2_1),
             findViewById(R.id.ul_p2_2),

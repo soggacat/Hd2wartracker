@@ -8,7 +8,6 @@
     android:paddingTop="20dp"
     android:background="@android:color/transparent">
 
-    <!-- Заголовок PAGE 1 -->
     <TextView
         android:id="@+id/page1_title"
         android:layout_width="93dp"

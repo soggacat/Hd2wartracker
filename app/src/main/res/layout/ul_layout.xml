@@ -40,7 +40,7 @@
                     android:textSize="20sp" />
 
                 <ProgressBar
-                    android:id="@+id/moc_progressbar"
+                    android:id="@+id/ul_progressbar"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

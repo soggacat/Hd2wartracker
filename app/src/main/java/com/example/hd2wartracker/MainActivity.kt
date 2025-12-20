@@ -31,7 +31,7 @@ class MainActivity : Activity() {
 
         val btnMoc = findViewById<ImageButton>(R.id.moc_button)
         val btnVc = findViewById<ImageButton>(R.id.vc_button)
-        val btnUl = findViewById<ImageButton>(R.id.url_button)
+        val btnUl = findViewById<ImageButton>(R.id.ul_button)
 
         btnMoc.setOnClickListener {
             startActivity(Intent(this, moc_screen::class.java))

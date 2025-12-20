@@ -5,28 +5,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@android:color/transparent"
-    android:paddingTop="20dp">
+    android:paddingTop="20dp"
 
-    <!-- Заголовок PAGE 1 -->
+    android:background="@android:color/transparent">
+
+
     <TextView
         android:id="@+id/page1_title"
         android:layout_width="93dp"
         android:layout_height="25dp"
         android:background="@drawable/card_bg"
         android:paddingStart="20dp"
-        android:text="Page 2"
+        android:text="Page 1"
         android:textColor="#FFE600"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/page1_frame"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <FrameLayout
         android:id="@+id/page1_frame"
-        android:layout_width="348dp"
-        android:layout_height="203dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/card_bg"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,68 +41,66 @@
 
 
             <ImageButton
-                android:id="@+id/ul_p2_5"
+                android:id="@+id/bj_p1_1"
                 android:layout_width="62dp"
                 android:layout_height="55dp"
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
-                tools:layout_editor_absoluteX="1dp"
-                tools:layout_editor_absoluteY="16dp" />
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintVertical_bias="0.0" />
 
             <ImageButton
-                android:id="@+id/ul_p2_4"
+                android:id="@+id/bj_p1_2"
+                android:layout_width="62dp"
+                android:layout_height="116dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/ph"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="76dp" />
+
+            <ImageButton
+                android:id="@+id/bj_p1_3"
                 android:layout_width="123dp"
                 android:layout_height="172dp"
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
-                tools:layout_editor_absoluteX="134dp"
-                tools:layout_editor_absoluteY="8dp" />
+                tools:layout_editor_absoluteX="70dp"
+                tools:layout_editor_absoluteY="4dp" />
 
             <ImageButton
-                android:id="@+id/ul_p2_1"
+                android:id="@+id/bj_p1_4"
                 android:layout_width="60dp"
                 android:layout_height="53dp"
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
-                tools:layout_editor_absoluteX="257dp"
-                tools:layout_editor_absoluteY="8dp" />
+                tools:layout_editor_absoluteX="224dp"
+                tools:layout_editor_absoluteY="21dp" />
 
             <ImageButton
-                android:id="@+id/ul_p2_3"
+                android:id="@+id/bj_p1_6"
                 android:layout_width="124dp"
                 android:layout_height="115dp"
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="80dp" />
+                tools:layout_editor_absoluteX="203dp"
+                tools:layout_editor_absoluteY="94dp" />
 
             <ImageButton
-                android:id="@+id/ul_p2_2"
+                android:id="@+id/bj_p1_5"
                 android:layout_width="59dp"
                 android:layout_height="53dp"
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
-
-                tools:layout_editor_absoluteX="75dp"
-                tools:layout_editor_absoluteY="27dp" />
-
-            <ImageButton
-                android:id="@+id/ul_p2_6"
-                android:layout_width="62dp"
-                android:layout_height="112dp"
-                android:background="@null"
-                android:scaleType="fitXY"
-                android:src="@drawable/ph"
-                tools:layout_editor_absoluteX="262dp"
-                tools:layout_editor_absoluteY="65dp" />
+                tools:layout_editor_absoluteX="268dp"
+                tools:layout_editor_absoluteY="22dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

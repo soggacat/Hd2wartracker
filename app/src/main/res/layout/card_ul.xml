@@ -19,7 +19,7 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/url_button"
+                android:id="@+id/ul_button"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="@null"
