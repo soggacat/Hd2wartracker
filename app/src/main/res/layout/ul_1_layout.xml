@@ -72,8 +72,8 @@
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
-                tools:layout_editor_absoluteX="82dp"
-                tools:layout_editor_absoluteY="7dp" />
+                tools:layout_editor_absoluteX="58dp"
+                tools:layout_editor_absoluteY="2dp" />
 
             <ImageButton
                 android:id="@+id/ul_p1_8"
@@ -130,8 +130,8 @@
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="66dp" />
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="63dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>

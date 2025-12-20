@@ -47,19 +47,21 @@
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
-                tools:layout_editor_absoluteX="-1dp"
-                tools:layout_editor_absoluteY="5dp" />
+                app:layout_constraintEnd_toStartOf="@+id/ul_p3_3"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="4dp" />
 
             <ImageButton
                 android:id="@+id/ul_p3_5"
                 android:layout_width="62dp"
                 android:layout_height="116dp"
-                android:layout_marginBottom="4dp"
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
                 app:layout_constraintBottom_toBottomOf="parent"
-                tools:layout_editor_absoluteX="131dp" />
+                app:layout_constraintEnd_toStartOf="@+id/ul_p3_6"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
             <ImageButton
                 android:id="@+id/ul_p3_2"
@@ -68,32 +70,30 @@
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
-                tools:layout_editor_absoluteX="132dp"
+                app:layout_constraintEnd_toStartOf="@+id/ul_p3_6"
+                app:layout_constraintStart_toStartOf="@+id/ul_p3_5"
                 tools:layout_editor_absoluteY="6dp" />
 
             <ImageButton
                 android:id="@+id/ul_p3_1"
                 android:layout_width="124dp"
                 android:layout_height="115dp"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="68dp"
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
+                app:layout_constraintEnd_toStartOf="@+id/ul_p3_5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                tools:layout_editor_absoluteY="68dp" />
 
             <ImageButton
                 android:id="@+id/ul_p3_3"
                 android:layout_width="59dp"
                 android:layout_height="53dp"
-                android:layout_marginBottom="120dp"
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
-
-                app:layout_constraintBottom_toBottomOf="parent"
-                tools:layout_editor_absoluteX="69dp" />
+                app:layout_constraintEnd_toStartOf="@+id/ul_p3_2"
+                tools:layout_editor_absoluteY="7dp" />
 
             <ImageButton
                 android:id="@+id/ul_p3_6"
@@ -102,10 +102,7 @@
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

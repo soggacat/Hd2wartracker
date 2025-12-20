@@ -19,7 +19,7 @@ class vc_screen : Activity() {
     private val pressedKey = "pressed_buttons"
     private val medalsKey = "medals"
 
-    private val TOTAL = 18
+    private val TOTAL = 24
 
     private val medalsPerButton = listOf(
         40, 20, 30, 8, 7, 2, 20, 8,
