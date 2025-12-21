@@ -37,22 +37,22 @@ class vc_screen : Activity() {
         R.drawable.vc_p1_7d,
         R.drawable.vc_p1_8d,
 
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
+        R.drawable.vc_p2_1d,
+        R.drawable.vc_p1_5d,
+        R.drawable.vc_p2_7d,
+        R.drawable.vc_p2_2d,
+        R.drawable.vc_p2_3d,
+        R.drawable.vc_p2_6d,
+        R.drawable.vc_p2_4d,
+        R.drawable.vc_p2_8d,
 
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
+        R.drawable.vc_p3_1d,
+        R.drawable.vc_p3_2d,
+        R.drawable.vc_p1_5d,
+        R.drawable.vc_p3_4d,
+        R.drawable.vc_p3_5d,
+        R.drawable.vc_p3_6d,
+        R.drawable.vc_p3_7d,
 
 
         )
@@ -68,21 +68,21 @@ class vc_screen : Activity() {
         R.drawable.vc_p1_8,
 
         R.drawable.vc_p2_1,
+        R.drawable.vc_p2_5,
+        R.drawable.vc_p2_7,
         R.drawable.vc_p2_2,
         R.drawable.vc_p2_3,
-        R.drawable.vc_p2_4,
-        R.drawable.vc_p2_5,
         R.drawable.vc_p2_6,
-        R.drawable.vc_p2_7,
+        R.drawable.vc_p2_4,
         R.drawable.vc_p2_8,
 
-        R.drawable.vc_p3_1,
         R.drawable.vc_p3_2,
+        R.drawable.vc_p3_1,
         R.drawable.moc_p3_5,
         R.drawable.vc_p3_4,
-        R.drawable.vc_p1_5,
-        R.drawable.vc_p1_6,
-        R.drawable.vc_p1_7
+        R.drawable.vc_p3_5,
+        R.drawable.vc_p3_6,
+        R.drawable.vc_p3_7
 
     )
 
