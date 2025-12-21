@@ -35,8 +35,27 @@ class vc_screen : Activity() {
         R.drawable.vc_p1_5d,
         R.drawable.vc_p1_6d,
         R.drawable.vc_p1_7d,
-        R.drawable.vc_p1_8d
-    )
+        R.drawable.vc_p1_8d,
+
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+        R.drawable.ph,
+
+
+        )
 
     private val normalImages = listOf(
         R.drawable.vc_p1_1,
@@ -46,7 +65,25 @@ class vc_screen : Activity() {
         R.drawable.vc_p1_5,
         R.drawable.vc_p1_6,
         R.drawable.vc_p1_7,
-        R.drawable.vc_p1_8
+        R.drawable.vc_p1_8,
+
+        R.drawable.vc_p2_1,
+        R.drawable.vc_p2_2,
+        R.drawable.vc_p2_3,
+        R.drawable.vc_p2_4,
+        R.drawable.vc_p2_5,
+        R.drawable.vc_p2_6,
+        R.drawable.vc_p2_7,
+        R.drawable.vc_p2_8,
+
+        R.drawable.vc_p3_1,
+        R.drawable.vc_p3_2,
+        R.drawable.moc_p3_5,
+        R.drawable.vc_p3_4,
+        R.drawable.vc_p1_5,
+        R.drawable.vc_p1_6,
+        R.drawable.vc_p1_7
+
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -83,6 +120,7 @@ class vc_screen : Activity() {
             findViewById(R.id.p3_item2),
             findViewById(R.id.p3_item3),
             findViewById(R.id.p3_item4),
+            findViewById(R.id.p3_item7),
             findViewById(R.id.p3_item5),
             findViewById(R.id.p3_item_center)
         )

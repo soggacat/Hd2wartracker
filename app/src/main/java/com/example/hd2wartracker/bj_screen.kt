@@ -89,26 +89,26 @@ class bj_screen : Activity() {
         }
 
         buttons = listOf(
-            findViewById(R.id.ul_p1_1),
-            findViewById(R.id.ul_p1_2),
-            findViewById(R.id.ul_p1_3),
-            findViewById(R.id.ul_p1_4),
-            findViewById(R.id.ul_p1_5),
-            findViewById(R.id.ul_p1_6),
+            findViewById(R.id.bj_p1_1),
+            findViewById(R.id.bj_p1_2),
+            findViewById(R.id.bj_p1_3),
+            findViewById(R.id.bj_p1_4),
+            findViewById(R.id.bj_p1_5),
+            findViewById(R.id.bj_p1_6),
 
-            findViewById(R.id.ul_p2_1),
-            findViewById(R.id.ul_p2_2),
-            findViewById(R.id.ul_p2_3),
-            findViewById(R.id.ul_p2_4),
-            findViewById(R.id.ul_p2_5),
-            findViewById(R.id.ul_p2_6),
+            findViewById(R.id.bj_p2_1),
+            findViewById(R.id.bj_p2_2),
+            findViewById(R.id.bj_p2_3),
+            findViewById(R.id.bj_p2_4),
+            findViewById(R.id.bj_p2_5),
+            findViewById(R.id.bj_p2_6),
 
-            findViewById(R.id.ul_p3_1),
-            findViewById(R.id.ul_p3_2),
-            findViewById(R.id.ul_p3_3),
-            findViewById(R.id.ul_p3_4),
-            findViewById(R.id.ul_p3_5),
-            findViewById(R.id.ul_p3_6)
+            findViewById(R.id.bj_p3_1),
+            findViewById(R.id.bj_p3_2),
+            findViewById(R.id.bj_p3_3),
+            findViewById(R.id.bj_p3_4),
+            findViewById(R.id.bj_p3_5),
+            findViewById(R.id.bj_p3_6)
         )
 
         loadState()
@@ -172,11 +172,15 @@ class bj_screen : Activity() {
     private fun loadState() {
         val prefs = getSharedPreferences(prefsName, MODE_PRIVATE)
         pressed.clear()
-        pressed.addAll(
-            prefs.getStringSet(pressedKey, emptySet())!!.map { it.toInt() }
-        )
+
+        val saved = prefs.getStringSet(pressedKey, emptySet())!!
+            .mapNotNull { it.toIntOrNull() }
+            .filter { it in 0 until medalsPerButton.size }
+
+        pressed.addAll(saved)
         recalcMedals()
     }
+
 
     override fun onPause() {
         super.onPause()

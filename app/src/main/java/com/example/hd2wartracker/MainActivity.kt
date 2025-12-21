@@ -32,6 +32,8 @@ class MainActivity : Activity() {
         val btnMoc = findViewById<ImageButton>(R.id.moc_button)
         val btnVc = findViewById<ImageButton>(R.id.vc_button)
         val btnUl = findViewById<ImageButton>(R.id.ul_button)
+        val btnBj = findViewById<ImageButton>(R.id.bj_button)
+
 
         btnMoc.setOnClickListener {
             startActivity(Intent(this, moc_screen::class.java))
@@ -43,6 +45,10 @@ class MainActivity : Activity() {
 
         btnUl.setOnClickListener {
             startActivity(Intent(this, ul_screen::class.java))
+        }
+
+        btnBj.setOnClickListener {
+            startActivity(Intent(this, bj_screen::class.java))
         }
     }
 

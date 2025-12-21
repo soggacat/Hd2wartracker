@@ -18,9 +18,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/bj_button"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
+                android:background="@null"
+                android:scaleType="fitXY"
                 android:layout_gravity="center"
                 android:src="@drawable/bj" />
 
