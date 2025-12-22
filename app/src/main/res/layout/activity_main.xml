@@ -35,44 +35,7 @@
             android:gravity="center_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/warbonds_title">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TOTAL MEDALS -"
-                android:fontFamily="@font/goldman_font"
-                android:textColor="#FFD700"
-                android:textSize="16sp"
-                android:layout_marginEnd="8dp" />
-
-            <TextView
-                android:id="@+id/totalMedals"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="20000"
-                android:fontFamily="@font/goldman_font"
-                android:textColor="#FFD700"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/medal"></ImageView>
-        </LinearLayout>
-
-        <ProgressBar
-            android:id="@+id/mainProgressBar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:progress="65"
-            android:max="100"
-            android:progressDrawable="@drawable/pg_gold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/medals_container" />
+            app:layout_constraintTop_toBottomOf="@+id/warbonds_title"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

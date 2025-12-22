@@ -15,9 +15,9 @@ class ul_screen : Activity() {
     private val pressed = mutableSetOf<Int>()
     private var totalMedals = 0
 
-    private val prefsName = "prefs"
+    private val prefsName = "ul_prefs"
     private val pressedKey = "pressed_buttons"
-    private val medalsKey = "medals"
+    private val medalsKey = "ul_medals"
 
     private val TOTAL = 20
     private val medalsPerButton = listOf(

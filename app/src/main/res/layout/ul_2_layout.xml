@@ -41,24 +41,25 @@
 
 
             <ImageButton
+                android:id="@+id/ul_p2_"
+                android:layout_width="124dp"
+                android:layout_height="115dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/ph"
+                app:layout_constraintEnd_toStartOf="@+id/ul_p2_6"
+                app:layout_constraintStart_toEndOf="@+id/ul_p2_3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
                 android:id="@+id/ul_p2_5"
                 android:layout_width="62dp"
                 android:layout_height="55dp"
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
-                tools:layout_editor_absoluteX="1dp"
-                tools:layout_editor_absoluteY="16dp" />
-
-            <ImageButton
-                android:id="@+id/ul_p2_4"
-                android:layout_width="123dp"
-                android:layout_height="172dp"
-                android:background="@null"
-                android:scaleType="fitXY"
-                android:src="@drawable/ph"
-                tools:layout_editor_absoluteX="134dp"
-                tools:layout_editor_absoluteY="8dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
                 android:id="@+id/ul_p2_1"
@@ -67,8 +68,29 @@
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
-                tools:layout_editor_absoluteX="257dp"
-                tools:layout_editor_absoluteY="8dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/ul_p2_6" />
+
+            <ImageButton
+                android:id="@+id/ul_p2_4"
+                android:layout_width="60dp"
+                android:layout_height="53dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/ph"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/ul_p2_" />
+
+            <ImageButton
+                android:id="@+id/ul_p2_7"
+                android:layout_width="60dp"
+                android:layout_height="53dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/ph"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/ul_p2_" />
 
             <ImageButton
                 android:id="@+id/ul_p2_3"
@@ -77,8 +99,8 @@
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="80dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <ImageButton
                 android:id="@+id/ul_p2_2"
@@ -88,8 +110,8 @@
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
 
-                tools:layout_editor_absoluteX="75dp"
-                tools:layout_editor_absoluteY="27dp" />
+                app:layout_constraintEnd_toEndOf="@+id/ul_p2_3"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
                 android:id="@+id/ul_p2_6"
@@ -98,8 +120,8 @@
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
-                tools:layout_editor_absoluteX="262dp"
-                tools:layout_editor_absoluteY="65dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

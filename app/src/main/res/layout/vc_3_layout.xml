@@ -85,21 +85,18 @@
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/vc_p3_1"
-                app:layout_constraintBottom_toBottomOf="@+id/p3_item3"
-                app:layout_constraintStart_toStartOf="@+id/p3_item1" />
+                app:layout_constraintStart_toStartOf="@+id/p3_item1"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
                 android:id="@+id/p3_item1"
                 android:layout_width="124dp"
                 android:layout_height="115dp"
-                android:layout_marginTop="4dp"
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/vc_p3_2"
-                app:layout_constraintEnd_toStartOf="@+id/p3_item_center"
-                app:layout_constraintHorizontal_bias="0.025"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <ImageButton
                 android:id="@+id/p3_item3"
@@ -108,11 +105,8 @@
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/moc_p3_5"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/p3_item1"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/p3_item2"
-                app:layout_constraintTop_toBottomOf="@+id/p3_item1" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
                 android:id="@+id/p3_item_center"

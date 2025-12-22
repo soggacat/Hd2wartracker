@@ -42,63 +42,65 @@
 
             <ImageButton
                 android:id="@+id/bj_p1_1"
-                android:layout_width="62dp"
-                android:layout_height="55dp"
-                android:background="@null"
-                android:scaleType="fitXY"
-                android:src="@drawable/ph"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <ImageButton
-                android:id="@+id/bj_p1_2"
-                android:layout_width="62dp"
-                android:layout_height="116dp"
-                android:background="@null"
-                android:scaleType="fitXY"
-                android:src="@drawable/ph"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="76dp" />
-
-            <ImageButton
-                android:id="@+id/bj_p1_3"
-                android:layout_width="123dp"
-                android:layout_height="172dp"
-                android:background="@null"
-                android:scaleType="fitXY"
-                android:src="@drawable/ph"
-                tools:layout_editor_absoluteX="70dp"
-                tools:layout_editor_absoluteY="4dp" />
-
-            <ImageButton
-                android:id="@+id/bj_p1_4"
                 android:layout_width="60dp"
                 android:layout_height="53dp"
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
-                tools:layout_editor_absoluteX="224dp"
-                tools:layout_editor_absoluteY="21dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/bj_p1_5"
+                android:layout_width="62dp"
+                android:layout_height="116dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/ph"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/bj_p1_6"
+                app:layout_constraintStart_toEndOf="@+id/bj_p1_3" />
 
             <ImageButton
                 android:id="@+id/bj_p1_6"
+                android:layout_width="123dp"
+                android:layout_height="172dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/ph"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/bj_p1_2"
+                android:layout_width="60dp"
+                android:layout_height="53dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/ph"
+                app:layout_constraintEnd_toEndOf="@+id/bj_p1_3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/bj_p1_3"
                 android:layout_width="124dp"
                 android:layout_height="115dp"
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
-                tools:layout_editor_absoluteX="203dp"
-                tools:layout_editor_absoluteY="94dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <ImageButton
-                android:id="@+id/bj_p1_5"
+                android:id="@+id/bj_p1_4"
                 android:layout_width="59dp"
                 android:layout_height="53dp"
                 android:background="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/ph"
-                tools:layout_editor_absoluteX="268dp"
-                tools:layout_editor_absoluteY="22dp" />
+                app:layout_constraintEnd_toEndOf="@+id/bj_p1_5"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>

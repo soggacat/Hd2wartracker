@@ -12,19 +12,19 @@ class vc_screen : Activity() {
     private lateinit var buttons: List<ImageButton>
     private lateinit var progressBar: ProgressBar
 
+    private val prefsName = "vc_prefs"
+    private val pressedKey = "pressed_buttons"
+    private val medalsKey = "vc_medals"
     private val pressed = mutableSetOf<Int>()
     private var totalMedals = 0
 
-    private val prefsName = "prefs"
-    private val pressedKey = "pressed_buttons"
-    private val medalsKey = "medals"
 
-    private val TOTAL = 18
+    private val TOTAL = 23
 
     private val medalsPerButton = listOf(
         40, 20, 30, 8, 7, 2, 20, 8,
-        12, 8, 40, 55, 45, 2,
-        110, 25, 32, 55, 65, 65
+        12, 8, 40, 55, 45, 2, 67, 61,
+        110, 25, 32, 55, 65, 65, 52
     )
 
     private val pressedImages = listOf(
@@ -52,7 +52,7 @@ class vc_screen : Activity() {
         R.drawable.vc_p3_4d,
         R.drawable.vc_p3_5d,
         R.drawable.vc_p3_6d,
-        R.drawable.vc_p3_7d,
+        R.drawable.vc_p3_7d
 
 
         )
