@@ -46,7 +46,7 @@
                 android:layout_height="56dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/ph"
+                android:src="@drawable/ul_p1_2"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
@@ -58,7 +58,7 @@
                 android:layout_height="113dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/ph"
+                android:src="@drawable/ul_p1_8"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 
@@ -68,7 +68,7 @@
                 android:layout_height="113dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/ph"
+                android:src="@drawable/ul_p1_7"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/ul_p1_6" />
 
@@ -78,7 +78,7 @@
                 android:layout_height="113dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/ph"
+                android:src="@drawable/ul_p1_4"
                 app:layout_constraintEnd_toStartOf="@+id/ul_p1_6"
                 app:layout_constraintStart_toEndOf="@+id/ul_p1_1" />
 
@@ -88,7 +88,7 @@
                 android:layout_height="55dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/ph"
+                android:src="@drawable/ul_p1_6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -98,7 +98,7 @@
                 android:layout_height="56dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/ph"
+                android:src="@drawable/ul_p1_3"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/ul_p1_1" />
 
@@ -108,7 +108,7 @@
                 android:layout_height="113dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/ph"
+                android:src="@drawable/ul_p1_1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

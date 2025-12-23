@@ -27,7 +27,7 @@ class MainActivity : Activity() {
     private val UL_MEDALS  = "ul_medals"
     private val BJ_MEDALS  = "bj_medals"
 
-    // ===== TOTALS =====
+    // =====ц TOTALS =====
     private val TOTAL_MOC = 18
     private val TOTAL_VC  = 23
     private val TOTAL_UL  = 22

@@ -107,6 +107,8 @@ class ul_screen : Activity() {
             findViewById(R.id.ul_p2_4),
             findViewById(R.id.ul_p2_5),
             findViewById(R.id.ul_p2_6),
+            
+
 
             findViewById(R.id.ul_p3_1),
             findViewById(R.id.ul_p3_2),
