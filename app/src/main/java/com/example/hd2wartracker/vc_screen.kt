@@ -23,8 +23,8 @@ class vc_screen : Activity() {
 
     private val medalsPerButton = listOf(
         40, 20, 30, 8, 7, 2, 20, 8,
-        12, 8, 40, 55, 45, 2, 67, 61,
-        110, 25, 32, 55, 65, 65, 52
+        15, 12, 50, 5, 20, 35, 50, 45,
+        55, 20, 32, 60, 70, 80, 50
     )
 
     private val pressedImages = listOf(

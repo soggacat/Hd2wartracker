@@ -22,59 +22,59 @@ class bj_screen : Activity() {
     private val TOTAL = 18
 
     private val medalsPerButton = listOf(
-        40, 20, 30, 8, 7, 2,
-        12, 8, 40, 55, 45, 2,
-        110, 25, 32, 55, 65, 65
+        7, 8, 35, 30, 2, 45,
+        45, 7, 55, 25, 12, 40,
+        65, 55, 65, 110, 25, 32
     )
 
     private val pressedImages = listOf(
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
+        R.drawable.moc_p1_item5d,
+        R.drawable.bj_p1_2d,
+        R.drawable.bj_p1_3d,
+        R.drawable.bj_p1_4d,
+        R.drawable.bj_p1_5d,
+        R.drawable.bj_p1_6d,
 
 
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
+        R.drawable.bj_p2_1d,
+        R.drawable.bj_p2_2d,
+        R.drawable.bj_p2_3d,
+        R.drawable.bj_p2_4d,
+        R.drawable.moc_p1_item5d,
+        R.drawable.bj_p2_6d,
 
 
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph
+        R.drawable.bj_p3_1d,
+        R.drawable.bj_p3_2d,
+        R.drawable.bj_p3_3d,
+        R.drawable.bj_p3_4d,
+        R.drawable.bj_p3_5d,
+        R.drawable.moc_p1_item5d
     )
 
     private val normalImages = listOf(
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
+        R.drawable.moc_p1_5,
+        R.drawable.bj_p1_2,
+        R.drawable.bj_p1_3,
+        R.drawable.bj_p1_4,
+        R.drawable.bj_p1_5,
+        R.drawable.bj_p1_6,
 
 
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
+        R.drawable.bj_p2_1,
+        R.drawable.bj_p2_2,
+        R.drawable.bj_p2_3,
+        R.drawable.bj_p2_4,
+        R.drawable.moc_p2_1,
+        R.drawable.bj_p2_6,
 
 
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph
+        R.drawable.bj_p3_1,
+        R.drawable.bj_p3_2,
+        R.drawable.bj_p3_3,
+        R.drawable.bj_p3_4,
+        R.drawable.bj_p3_5,
+        R.drawable.moc_p3_5
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

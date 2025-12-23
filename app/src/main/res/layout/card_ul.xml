@@ -50,7 +50,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/goldman_font"
                     android:paddingLeft="35dp"
-                    android:text="Medals: 0/829"
+                    android:text="Medals: 0/836"
                     android:textColor="#FFD700"
                     android:textSize="15sp" />
             </LinearLayout>

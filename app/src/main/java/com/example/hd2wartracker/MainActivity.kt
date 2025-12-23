@@ -35,7 +35,7 @@ class MainActivity : Activity() {
 
     private val MAX_MOC_MEDALS = 641
     private val MAX_VC_MEDALS  = 734
-    private val MAX_UL_MEDALS  = 829
+    private val MAX_UL_MEDALS  = 836
     private val MAX_BJ_MEDALS  = 663
 
     // ===== UI (MOC) =====

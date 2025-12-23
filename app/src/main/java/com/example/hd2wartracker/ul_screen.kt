@@ -21,9 +21,9 @@ class ul_screen : Activity() {
 
     private val TOTAL = 22
     private val medalsPerButton = listOf(
-        40, 20, 30, 8, 7, 2, 7, 2,
-        12, 8, 40, 55, 45, 2, 50, 35,
-        110, 25, 32, 55, 65, 65
+        40, 30, 8, 2, 7, 75, 30, 20,
+        12, 85, 50, 20, 55, 5, 35, 45,
+        32, 55, 50, 110, 20, 50
     )
 
     private val pressedImages = listOf(
@@ -35,7 +35,6 @@ class ul_screen : Activity() {
         R.drawable.ul_p1_6d,
         R.drawable.ul_p1_7d,
         R.drawable.ul_p1_8d,
-
 
         R.drawable.moc_p2_1d,
         R.drawable.ul_p2_2d,
