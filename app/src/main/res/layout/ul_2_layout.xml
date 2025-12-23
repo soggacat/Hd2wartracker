@@ -67,7 +67,7 @@
                 android:layout_height="53dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/ph"
+                android:src="@drawable/moc_p2_1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/ul_p2_6" />

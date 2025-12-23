@@ -19,65 +19,67 @@ class ul_screen : Activity() {
     private val pressedKey = "pressed_buttons"
     private val medalsKey = "ul_medals"
 
-    private val TOTAL = 20
+    private val TOTAL = 22
     private val medalsPerButton = listOf(
         40, 20, 30, 8, 7, 2, 7, 2,
-        12, 8, 40, 55, 45, 2,
+        12, 8, 40, 55, 45, 2, 50, 35,
         110, 25, 32, 55, 65, 65
     )
 
     private val pressedImages = listOf(
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
+        R.drawable.ul_p1_1d,
+        R.drawable.ul_p1_2d,
+        R.drawable.ul_p1_3d,
+        R.drawable.ul_p1_4d,
+        R.drawable.moc_p1_item5d,
+        R.drawable.ul_p1_6d,
+        R.drawable.ul_p1_7d,
+        R.drawable.ul_p1_8d,
 
 
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
+        R.drawable.moc_p2_1d,
+        R.drawable.ul_p2_2d,
+        R.drawable.ul_p2_3d,
+        R.drawable.ul_p2_4d,
+        R.drawable.ul_p2_5d,
+        R.drawable.ul_p2_6d,
+        R.drawable.ul_p2_7d,
+        R.drawable.ul_p2_8d,
 
-
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph
+        R.drawable.moc_p2_1d,
+        R.drawable.ul_p3_1d,
+        R.drawable.ul_p3_3d,
+        R.drawable.ul_p3_4d,
+        R.drawable.ul_p3_5d,
+        R.drawable.ul_p3_6d
     )
 
     private val normalImages = listOf(
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
+        R.drawable.ul_p1_1,
+        R.drawable.ul_p1_2,
+        R.drawable.ul_p1_3,
+        R.drawable.ul_p1_4,
+        R.drawable.moc_p1_5,
+        R.drawable.ul_p1_6,
+        R.drawable.ul_p1_7,
+        R.drawable.ul_p1_8,
 
 
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
+        R.drawable.moc_p2_1,
+        R.drawable.ul_p2_2,
+        R.drawable.ul_p2_3,
+        R.drawable.ul_p2_4,
+        R.drawable.ul_p2_5,
+        R.drawable.ul_p2_6,
+        R.drawable.ul_p2_7,
+        R.drawable.ul_p2_8,
 
-
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph,
-        R.drawable.ph
+        R.drawable.moc_p3_5,
+        R.drawable.ul_p3_1,
+        R.drawable.ul_p3_3,
+        R.drawable.ul_p3_4,
+        R.drawable.ul_p3_5,
+        R.drawable.ul_p3_6
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -107,7 +109,8 @@ class ul_screen : Activity() {
             findViewById(R.id.ul_p2_4),
             findViewById(R.id.ul_p2_5),
             findViewById(R.id.ul_p2_6),
-            
+            findViewById(R.id.ul_p2_7),
+            findViewById(R.id.ul_p2_8),
 
 
             findViewById(R.id.ul_p3_1),

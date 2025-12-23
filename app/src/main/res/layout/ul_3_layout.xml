@@ -46,7 +46,7 @@
                 android:layout_height="53dp"
                 android:background="@null"
                 android:scaleType="fitXY"
-                android:src="@drawable/ph"
+                android:src="@drawable/moc_p3_5"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
